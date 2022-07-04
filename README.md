@@ -1,5 +1,4 @@
 # css-preprocessor
-
 less sass scss stylus 四款 css 预处理器横向对比学习 Demo
 
 ## 目录
@@ -27,6 +26,3 @@ less sass scss stylus 四款 css 预处理器横向对比学习 Demo
 -   [SCSS 中文文档](http://sass.bootcss.com/docss/scss-for-sass-users/)
 -   [Less 中文文档](http://less.bootcss.com/)
 -   [stylus 中文文档](https://stylus.bootcss.com/)
-
--   此行说明为了测试外网 beyond compare 解决冲突
--   多行测试
