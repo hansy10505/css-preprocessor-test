@@ -141,27 +141,6 @@ module.exports = {
                     'less-loader'
                 ])
             },
-            // stylus-loader
-            {
-                test: /\.styl$/,
-                exclude: path.join(__dirname, 'node_modules'),
-                include: path.join(__dirname, 'src'),
-                use: ExtractTextPlugin.extract([
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                require('postcss-import'),
-                                require('autoprefixer')({
-                                    browsers: ['last 5 versions']
-                                }),
-                            ]
-                        }
-                    },
-                    'stylus-loader'
-                ])
-            },
             // scss-loader
             {
                 test: /\.scss$/,

@@ -8,7 +8,7 @@ section.s1 div{
 // s2.变量插值 - 选择器
 @inter_sele: #b6b1ff;
 @no: s2;
-section.@{no} div{
+section.@{no} div{ // 变量名 必须使用大括号包裹
   height: 50px;
   background-color: @inter_sele;
 }
@@ -66,6 +66,7 @@ section.s8 div{
   // all会继承所有.bgcolor所属的实例， 如继承.bgcolor a
   &:extend(.bgcolor all);
 }
+
 // s9.Extend - 选择器扩展
 .a-hover{
   color: #ffffff;

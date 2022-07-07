@@ -47,7 +47,7 @@ section.s4{
   height: 50px;
   // 默认：可直接调用传参变量
   // 可选：可使用内置mixin计算变量的值，例如：darken变暗， lighten变亮
-  background-color: lighten($bg_color, 30%);
+  background-color: lighten($bg_color, 20%);
 }
 section.s5{
   div {
@@ -62,15 +62,18 @@ $extend: yellowgreen;
 .color {
   background-color: darken($extend, 10%);
 }
-.color a{
+.color p{
   text-decoration: none;
-  color: #666666;
+  color: #d82525;
 }
 section.s6{
   div {
     // 继承会同时继承相关选择器的内容
     @extend .color;
     height: 50px;
+    p {
+      color: beige;
+    }
   }
 }
 
@@ -150,7 +153,7 @@ section.s6{
     */
 
 
-// 10.Interpolation 插值
+// 10.Interpolation 插值，特征为#{}
 $nest: yellowgreen;
 $no: "10";
 $border-postion: "left";
@@ -231,6 +234,7 @@ section.s14 {
     @while $item > 0{
       .item-#{$item} {
         width: 5px * $item;
+        background-color: lighten(red, 50%);
       }
       $item: $item - 2;
     }
@@ -245,7 +249,7 @@ $colors: (light:rgb(145, 255, 0), dark:rgb(1, 39, 25));
 }
 section.s15 {
   height: 50px;
-  background-color: color(light);
+  background-color: color(dark);
 }
 
 // 16.错误提示信息
@@ -261,5 +265,5 @@ $colors: (light:rgb(0, 255, 157), dark:rgb(1, 39, 25));
 }
 section.s16 {
   height: 50px;
-  background-color: color(light);
+  background-color: color(dark);
 }
